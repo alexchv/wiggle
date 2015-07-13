@@ -1,0 +1,4 @@
+%form#lets-wiggle.user-url{:action => '/preview', :method => :get, :data => {:remote => 'true'}}
+  -#%input{:name => 'authenticity_token', :type => :hidden, :value => form_authenticity_token}
+  %input#user-url.inner-input{:name => '[]', :placeholder => 'Website URL'}
+  %input.submit-button{:type => 'submit', :value => "Let's wiggle"}

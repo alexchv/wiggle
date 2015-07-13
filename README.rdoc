@@ -1,0 +1,16 @@
+= Wiggle
+
+== App infromation
+
+== Setup
+
+Database creation:
+  rake db:create
+
+Database initialization:
+  rake db:migrate
+  rake db:seed
+  rake animate_css:fetch
+
+Local machine database demo suite:
+  rake app:reset

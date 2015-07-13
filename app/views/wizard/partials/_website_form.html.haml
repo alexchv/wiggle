@@ -1,0 +1,3 @@
+= form_for(Website.new, :url => wizard_path, :html => {:class => 'user-url', :method => :put}) do |f|
+  = f.text_field :url, :class => 'inner-input', :placeholder => 'Website URL', :value => @website.andand.url
+  = f.submit "Let's wiggle", :class => 'submit-button'

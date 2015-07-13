@@ -1,0 +1,31 @@
+.landing
+  .hero-block.container-fluid
+    .wiggle-logo
+      = image_tag('content/landing/wiggle-logo.png')
+    %h1 Why should designers have all the fun
+
+    %div
+      = sign_in_btn
+    .more-down
+      %p Learn more
+      %p
+        %a{:href => "#features"}
+          = image_tag('content/landing/down-arrow.png')
+
+  #features.container
+    .row
+      = feature_landing('no-code feature-icon', 'No code', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptate quidem, a explicabo.')
+      = feature_landing('conversions feature-icon', 'Increase conversions', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptate quidem, a explicabo.')
+      = feature_landing('no-boring feature-icon', 'No more boring sites', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptate quidem, a explicabo.')
+
+  = title ('Wiggle Landing')
+
+  .try-for-free.container-fluid
+    -#%h3 Try Wiggle for free
+
+    .footer-info-links.row
+      .info-links.col-md-6
+        %a{:href => "#"} Help
+        %a{:href => "#"} Terms and Conditions
+      .cr-info-block.col-md-6
+        %p Supers Inc. 2015

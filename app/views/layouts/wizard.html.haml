@@ -1,0 +1,10 @@
+!!!
+%html
+  = render({:partial => 'layouts/partials/application/head'})
+  %body
+    .getting-started
+      .content
+        .wiggle-logo
+          = image_tag('content/landing/wiggle-logo.png')
+        %h1 Getting started with Wiggle
+        = yield

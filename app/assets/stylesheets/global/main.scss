@@ -1,0 +1,441 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	font-size: 1em;
+}
+html {
+	height: 100%;
+}
+button,
+input[type="submit"] {
+	border: 0;
+	border-radius: 3px;
+	box-shadow: none;
+}
+form {
+	.form-group {
+		label {
+			font-size: 1.2em;
+			margin-bottom: 15px;
+		}
+		input, .custom-select {
+			width: 100%;
+			height: 54px;
+			border: 1px solid #d9d9d9;
+			border-radius: 0;
+			color: #656565;
+			padding: 16px 20px;				
+		}
+		.custom-select {
+			position: relative;
+			padding: 8px 0;
+			select {
+				border: 0;
+				box-shadow: none;
+			}
+		}
+	}
+	.submit-form-group {
+		text-align: right;
+		.submit-changes {
+			display: inline-block;
+			max-width: 160px;
+			margin-left: 15px;
+			background-color: #7ad2bb;
+			color: #fff;
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 20px;
+		li input {
+			width: 73px;
+		}
+		li {
+			text-align: center;
+		}
+		li:first-child {
+			text-align: left;
+		}
+		li:last-child {
+			text-align: right;
+		}
+	}
+	li.form-group {
+		width: 30%;		
+	}
+	div.form-group {
+		padding-right: 20px;
+	}
+}
+
+// website form
+.user-url {
+  display: inline-block;
+  position: relative;
+  height: 70px;
+  max-width: 93%;
+  margin-bottom: 140px;
+  border: 4px solid #80d0bb;
+  border-radius: 40px;
+  padding: 9px;
+  background-color: #fff;
+  .inner-input {
+    position: relative;
+    width: 90%;
+    background-color: transparent;
+    color: #80d0bb;
+    border: 0;
+    box-shadow: none;
+    margin: 10px 0 0 20px;
+    z-index: 10;
+    &:focus, &:active {
+      outline: 0;
+    }
+  }
+}
+.submit-button {
+  display: inline-block;
+  margin: 40px auto;
+  padding: 12px 28px;
+  background-color: #ff4100;
+  border: 0;
+  border-radius: 20px !important;
+  box-shadow: none;
+  color: #fff;
+}
+@media (min-width: 920px) {
+  .submit-button {
+    margin: 0 auto;
+  }
+  .user-url {
+    .inner-input {
+      width: 602px;
+    }
+  }
+}
+
+.getting-started {
+	height: 94%;
+	margin: 0;
+	.content {
+		min-height: 100%;
+		margin: 30px;
+		padding: 50px 0 30px;
+		background-color: #e4f0ed;
+		text-align: center;
+		.wiggle-logo {
+			margin-bottom: 100px;
+		}
+		h1 {
+			color: #131066;
+			font-size: 3.5em;
+			font-weight: 300;
+			margin-bottom: 36px;
+		}
+		.getting-started-instruction {	
+			width: 90%;		
+			max-width: 780px;
+			margin: 0 auto;
+			margin-bottom: 80px;
+			line-height: 1.5em;
+		}
+		.wiggle-js-snippet {
+			display: block;
+			width: 90%;
+			max-width: 1078px;
+			height: 134px;
+			margin: 0 auto 72px auto;
+			background-color: #fff;
+			padding: 24px 35px;
+			text-align: left;
+			font-size: 0.9em;
+			color: #656565;
+		}
+		.submit-block {
+			text-align: center;
+			button.ready-to-start {
+				padding: 20px 40px;
+				background-color: #ff3d00;
+				color: #fff;
+				font-size: 0.95em;
+			}
+		}		
+	}
+}
+.admin-panel {
+	height: 100%;
+	background-color: #f2f2f2;
+	margin: 0;
+	nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100px;
+		height: 100%;
+		background-color: #333;
+		.user-tools {
+			padding: 15px;
+			li {
+				position: relative;
+				list-style-type: none;
+				width: 71px;
+				height: 71px;
+				margin-bottom: 28px;
+				border-radius: 40px;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				a {
+					display: block;
+					height: 100%;
+				}
+				.custom-title {
+					display: none;
+					position: absolute;
+					width: auto;
+					top: -20px;
+					left: 65px;
+					border-radius: 2px;
+					background-color: #2dc8b8;
+					padding: 8px 19px;
+					color: #fff;
+					text-align: center;
+					font-size: 0.8em;
+					white-space: nowrap;
+				}
+			}
+			li:hover .custom-title {
+					display: block;
+				}
+			.clear-wiggle-logo {
+				margin-bottom: 37px;
+				background-color: #ff3d00;
+				background-image: asset-url('content/wiggle-logo-clear.png');
+			}
+			.animations-list {
+				background-image: asset-url('content/play-icon.png');
+			}
+			.animations-list.active, 
+			.animations-list:hover, 
+			.animations-list:focus, 
+			.animations-list:active {
+				background-image: asset-url('content/play-active-icon.png');
+			}
+			.visual {
+				background-image: asset-url('content/visual-icon.png');
+			}
+			.visual.active, 
+			.visual:hover, 
+			.visual:focus, 
+			.visual:active {
+				background-image: asset-url('content/visual-active-icon.png');
+			}
+			.settings {
+				background-image: asset-url('content/settings-icon.png');
+			}
+			.settings.active, 
+			.settings:hover, 
+			.settings:focus, 
+			.settings:active {
+				background-image: asset-url('content/settings-active-icon.png');
+			}
+			.log-out {
+				background-image: asset-url('content/log-out-icon.png');
+			}
+			.log-out.active, 
+			.log-out:hover, 
+			.log-out:focus, 
+			.log-out:active {
+				background-image: asset-url('content/log-out-active-icon.png');
+			}
+		}
+	}
+	.logged-in-header {
+		margin-left: 100px;
+		height: 100px;
+		padding: 30px 40px 30px 90px;
+		
+		.lets-wiggle-block {
+			display: inline-block;
+			width: 49%;
+			text-align: left;
+		}
+		.user-block {
+			display: inline-block;
+			width: 50%;
+			text-align: right;
+			img, span {
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+		}
+		.lets-wiggle {				
+			width: 132px;
+			height: 44px;
+			background-color: #ff3d00;
+			color: #fff;
+			font-size: 0.95em;
+			border-radius: 22px;
+			vertical-align: middle;
+		}			
+	}
+	.content {
+		margin-left: 100px;		
+		height: 100%;
+		header {
+			font-size: 1.9em;
+			margin-bottom: 20px;
+		}
+		.cancel-account,
+		.cancel-animation {
+			text-align: right;
+			button {
+				background-color: transparent;
+				border: 3px solid #fe430d;
+				padding: 20px 40px;
+			}
+		}
+		.cancel-account {
+			width: 80%;
+  			max-width: 1015px;
+  			margin: 0 auto;
+			padding: 0 0 40px 0;
+		}
+		.cancel-animation {
+			display: inline-block;
+			button {
+				padding: 10px 25px;
+			}
+		}
+		.settings-block {
+			width: 80%;
+			max-width: 1015px;
+			margin: 40px auto;
+			padding: 55px;
+			background-color: #fff;
+			color: #333;
+			& > * {
+				padding: 0 15px;
+			}
+			header {
+				margin-bottom: 50px;
+			}			
+			.wiggle-js-snippet {
+				display: block;
+				width: 870px;
+				height: 134px;
+				background-color: #fff;
+				border: 1px solid #d9d9d9;
+				border-radius: 2px;
+				padding: 20px 28px;
+				text-align: left;
+				font-size: 1.1em;
+				color: #656565;
+			}
+			.payment-info {
+				height: 100%;				
+				.cvc-help {
+					display: inline-block;
+					position: relative;
+					width: 14px;
+					height: 14px;
+					margin-left: 25px;
+					vertical-align: -1px;
+					background-image: asset-url('content/help-info.png');
+					background-repeat: no-repeat;
+					img {
+						display: none;
+						position: absolute;
+						left: 20px;
+						top: 0;
+					}
+					&:hover img {
+						display: block;
+					}
+				}
+			}
+			.main-info {
+				label {
+					color: #ff3b00;
+				}
+			}
+			.submit-changes {
+				margin: 150px 10px auto auto;
+				width: 158px;
+			}
+		}
+	}
+}
+.animations {
+	margin: 0 30px;
+	padding: 30px;
+	background-color: #fff;
+}
+.animation-tab {
+	.animation-tab-header {
+		border: 1px solid #d9d9d9;
+		background-color: #f8f8f8;
+		& > * {
+			margin: 15px 0;
+		}
+		.anim-header {
+			color: #131066;
+			font-size: 1.3em;
+		}
+		.tab-switcher {
+			text-align: right;
+			div {
+				display: inline-block;
+				width: 34px;
+				height: 34px;
+				margin-right: 0;
+				margin-left: auto;
+				border: 1px solid #ccc;
+				border-radius: 34px;
+				cursor: pointer;
+				text-align: center;
+				padding: 5px 0;
+				span {
+					font-size: 0.8em;
+				}
+				.glyphicon-chevron-down {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	.animation-tab-content {
+		height: 0;				
+		overflow: hidden;
+		form {
+			padding: 60px 0;
+			ul li {
+				text-align: left;
+				max-width: 124px;
+			}		
+			.form-group {
+				margin-bottom: 50px;
+				label {
+					color: #ff3b00;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}	
+}
+.animation-tab.tab-opened {
+	.animation-tab-content {
+		height: auto;
+		border: 1px solid #d9d9d9;	
+		border-top: 0;
+	}
+}
+@media (min-width: 920px) {
+	.animation-tab {
+		.animation-tab-header {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
