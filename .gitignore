@@ -65,4 +65,4 @@ config/environments/*.local.yml
 # Bower files
 /vendor/assets/javascripts/bower_components/
 *.bowerrc
-bower.json
+#bower.json
