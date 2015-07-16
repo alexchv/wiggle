@@ -4,9 +4,25 @@ class FirebaseService < Base::EventDispatcher
 
     def event_manager(object, event)
       super
+
       case event
         when :create
-          FIREBASE_CLIENT.set("/#{object.class.to_s.underscore.pluralize}/#{object.id}/", object.attributes)
+
+          # add object to own tree
+          object_name = object.class.to_s.underscore.pluralize
+          object_path = "/#{object_name}/#{object.id}/"
+
+          FIREBASE_CLIENT.set(object_path, object.attributes)
+
+          object.class.reflect_on_all_associations(:belongs_to).each do |p|
+
+            relation_name = p.name
+            relation_object = object.send(relation_name) # if object.respond_to?(relation)
+
+            FIREBASE_CLIENT.set("#{relation_name.to_s.pluralize}/#{relation_object.id}/#{object_name}/#{object.id}", true)
+
+          end
+
         when :update
 
         when :destroy

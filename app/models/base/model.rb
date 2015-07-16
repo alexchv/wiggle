@@ -1,12 +1,14 @@
 class Base::Model < ActiveRecord::Base
   self.abstract_class = true
 
+  include Firebasable
+
   CHILDREN_NAMES = %w(Base::SeedModel Base::VersionModel)
 
-  # def self.inherited(child_class)
-  #   super
-  #   inherited_extension(child_class, CHILDREN_NAMES, self.name)
-  # end
+  def self.inherited(child_class)
+    super
+    inherited_extension(child_class, CHILDREN_NAMES, self.name)
+  end
 
   class << self
 

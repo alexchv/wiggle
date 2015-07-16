@@ -1,8 +1,6 @@
 class Base::VersionModel < Base::Model
   self.abstract_class = true
 
-  include Firebasable
-
   has_paper_trail
 
   def history
