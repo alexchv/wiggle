@@ -3,6 +3,7 @@
     .wiggle-logo
       = image_tag('content/landing/wiggle-logo.png')
     %h1 Why should designers have all the fun
+    = render({:partial => 'landing/partials/form'})
 
     %div
       = sign_in_btn
@@ -21,7 +22,8 @@
   = title ('Wiggle Landing')
 
   .try-for-free.container-fluid
-    -#%h3 Try Wiggle for free
+    %h3 Try Wiggle for free
+    = render({:partial => 'landing/partials/form'})
 
     .footer-info-links.row
       .info-links.col-md-6

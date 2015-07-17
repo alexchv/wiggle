@@ -10,8 +10,5 @@ Rails.application.routes.draw do
   end
 
   resources :wizard
-  resources :websites, :only => [:new, :create]
-
-  get 'preview',         :to => 'landing#preview'
 
 end

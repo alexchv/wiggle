@@ -1,7 +1,7 @@
 class Base::Model < ActiveRecord::Base
   self.abstract_class = true
 
-  include Firebasable
+  # include Firebasable
 
   CHILDREN_NAMES = %w(Base::SeedModel Base::VersionModel)
 

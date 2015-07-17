@@ -54,7 +54,7 @@ h3 {
 	}
 }
 .hero-block {
-    position: relative;
+	position: relative;
 	min-height: 100%;
 	padding: 35px 20px;
 	background-color: #e4f0ed;
@@ -68,16 +68,15 @@ h3 {
 		}
 	}			
 	button.login {
-        color: initial;
 		margin-bottom: 70px;
 		padding: 9px 42px;
 		background-color: transparent;
 		border: 3px solid #fff;
 	}
 	.more-down {
-        position: absolute;
-        left: 47%;
-        bottom: 30px;
+		position: absolute;
+		left: 47%;
+		bottom: 30px;
 		p {
 			color: #ff4100;
 		}
@@ -97,6 +96,63 @@ h3 {
 		}			
 		button.login {
 			margin-bottom: 155px;
+		}
+	}
+}
+.user-url-landing {
+	display: inline-block;
+	position: relative;
+	height: 70px;
+	max-width: 93%;
+	margin-bottom: 140px;
+	border: 4px solid #80d0bb;
+	border-radius: 40px;
+	padding: 9px;
+	background-color: #fff;
+	.inner-input-landing {
+		position: relative;
+		width: 90%;
+		background-color: transparent;
+		color: #80d0bb;
+		border: 0;
+		box-shadow: none;
+		margin: 10px 0 0 20px;
+		z-index: 10;
+		&:focus, &:active {
+			outline: 0;
+		}
+//		&:focus + label,
+//		&:active + label {
+//			display: none;
+//		}
+	}
+	.inner-input-landing + label {
+		position: absolute;
+		top: 15px;
+		left: 32px;
+		color: #80d0bb;
+		font-weight: 300;
+		font-size: 1.5em;
+		z-index: 1;
+	}	
+}
+.submit-button-landing {
+	display: inline-block;
+	margin: 40px auto;
+	padding: 12px 28px;
+	background-color: #ff4100;
+	border: 0;
+	border-radius: 20px;
+	box-shadow: none;
+	color: #fff;
+}
+@media (min-width: 920px) {
+	.submit-button-landing {
+		margin: 0 auto;
+	}
+	.user-url-landing {
+		.inner-input-landing {
+			width: 602px;
 		}
 	}
 }
@@ -120,15 +176,15 @@ h3 {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 	}
-	.no-code {
-		background-image: asset-url('content/landing/feature-icon-code.png');
-	}
-	.conversions {
-		background-image: asset-url('content/landing/feature-icon-conv.png');
-	}
-	.no-boring {
-		background-image: asset-url('content/landing/feature-icon-no-boring.png');
-	}
+    .no-code {
+      background-image: asset-url('content/landing/feature-icon-code.png');
+    }
+    .conversions {
+      background-image: asset-url('content/landing/feature-icon-conv.png');
+    }
+    .no-boring {
+      background-image: asset-url('content/landing/feature-icon-no-boring.png');
+    }
 }
 @media (min-width: 920px) {
 	#features {
@@ -152,9 +208,9 @@ h3 {
 }
 @media (min-width: 920px) {
 	.try-for-free {
-		padding: 30px 40px 20px 40px;
+		padding: 165px 40px 20px 40px;
 		.footer-info-links {
-//			margin-top: 80px;
+			margin-top: 80px;
 		}
 		.info-links {
 			margin-bottom: 0;
