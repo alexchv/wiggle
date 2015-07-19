@@ -6,6 +6,7 @@ class DeviseCreateUsers < Migration::TableMigration
       t.string :last_name,  :null => false
       t.string :photo_url
       t.string :api_key
+      t.boolean :wizard_complete, :null => false, :default => false
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""

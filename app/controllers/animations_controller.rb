@@ -1,0 +1,1 @@
+class AnimationsController < LoggedUserController; end

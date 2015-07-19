@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   end
 
   resources :wizard
+  resources :animations
+
+  get 'finish_wizard', :to => 'wizard#finish_wizard'
 
 end

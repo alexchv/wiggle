@@ -41,6 +41,14 @@ class User < Base::VersionModel
     user
   end
 
+  def wizard_complete?
+    wizard_complete
+  end
+
+  def full_name
+    [first_name, last_name].join(' ')
+  end
+
   private
 
     def generate_api_key

@@ -2,4 +2,8 @@
 %html
   = render({:partial => 'layouts/partials/application/head'})
   %body
-    = yield
+    .admin-panel
+      = render({:partial => 'layouts/partials/application/menu'})
+      = render({:partial => 'layouts/partials/application/header'})
+      .content
+        = yield

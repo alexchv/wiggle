@@ -31,7 +31,7 @@ gem 'andand'                                               # Maybe Monad in idio
 gem 'paper_trail'                                          # Track changes to your models' data. Good for auditing or versioning.
 gem 'rails_admin'                                          # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 gem 'email_validator'                                      # An email validator for Rails 3+. See homepage for details: http://github.com/balexand/email_validator
-gem 'validate_url'                                         # This gem adds the capability of validating URLs to ActiveRecord and ActiveModel (Rails 3).
+# gem 'validate_url'                                         # This gem adds the capability of validating URLs to ActiveRecord and ActiveModel (Rails 3).
 gem 'responders'                                           # A set of responders modules to dry up your Rails 3.2+ app.
 gem 'gon'                                                  # If you need to send some data to your js files and you don't want to do this with long way through views and parsing - use this force!
 gem 'faker'                                                # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.

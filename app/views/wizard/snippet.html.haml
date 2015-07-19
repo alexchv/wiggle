@@ -5,5 +5,4 @@
 %code.wiggle-js-snippet
   #{"<script src='//my.letswiggle.io/#{current_user.api_key}.js' type='text/javascript' charset='utf-8' async='async'></script>"}
 .submit-block
-  -#= link_to
-  %button.ready-to-start Ready to start
+  = link_to(finish_wizard_path) { button_tag("Ready to start", :class => 'ready-to-start') }
