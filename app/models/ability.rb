@@ -5,7 +5,8 @@ class Ability
     # define_aliases
     user ||= User.new
 
-    can :manage, :all
+    # can :manage, :all
+    apply_user_rights(user)
   end
 
   # def define_aliases
@@ -18,7 +19,7 @@ class Ability
 
       can :read, [AnimationCategory, AnimationType]
 
-      can :manage, [Animation, Website], :user_id => user_id
+      can :manage, [Animation, Website] #, :user_id => user_id
 
       can :manage, Webpage, :website => { :user_id => user_id }
 

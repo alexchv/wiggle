@@ -1,15 +1,7 @@
 %nav
   %ul.user-tools
     %li.clear-wiggle-logo
-    %li.animations-list.active
-      %a{:href => "#"}
-      .custom-title Play
-    %li.visual
-      %a{:href => "#"}
-      .custom-title Visual
-    %li.settings
-      %a{:href => "#"}
-      .custom-title Settings
-    %li.log-out
-      %a{:href => destroy_user_session_path}
-      .custom-title Log out
+    = menu_item('Play', animations_path, {:class => 'animations-list'})
+    = menu_item('Visual', '#', {:class => 'visual'})
+    = menu_item('Settings', '#', {:class => 'settings'})
+    = menu_item('Log out', destroy_user_session_path, {:class => 'log-out'})

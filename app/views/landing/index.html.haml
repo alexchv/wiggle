@@ -6,7 +6,7 @@
     = render({:partial => 'landing/partials/form'})
 
     %div
-      = sign_in_btn
+      = button_with_link('Sign in with Google', user_omniauth_authorize_path(:google_oauth2), {:class => 'login'})
     .more-down
       %p Learn more
       %p

@@ -6,4 +6,5 @@
 //= require nprogress-turbolinks
 //= require jquery.cookie
 
+//= require chosen/chosen.jquery.min.js
 //= require remarkable-bootstrap-growl/bootstrap-notify.min.js

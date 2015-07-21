@@ -1,0 +1,7 @@
+$("#animation-<%=@animation.id%>").replaceWith("<%= j(render({:partial => 'animations/partials/animation', :locals => {:animation => @animation} })) %>");
+
+<% unless @animation.errors.any? %>
+    Wiggle.Classes.Alert.success('<%= flash.notice %>');
+<% end %>
+
+Wiggle.app.bindClasses($("#animation-<%=@animation.id%>"));

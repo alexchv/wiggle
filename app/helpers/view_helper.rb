@@ -10,8 +10,11 @@ module ViewHelper
     end
   end
 
-  def sign_in_btn
-    link_to(user_omniauth_authorize_path(:google_oauth2)) { button_tag("Sign in with Google", :class => 'login') }
+  def button_with_link(label, path, options = {})
+    default_options = {:method => :post, :class => ''}
+    default_options.merge!(options)
+
+    link_to(path) { button_tag(label, :method => default_options[:method], :class => default_options[:class]) }
   end
 
 end

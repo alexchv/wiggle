@@ -1,5 +1,4 @@
 class Wiggle.Classes.Alert
-#  template: JST["templates/alert/alert"]
   container: ".flash-messages"
   defaults:
     type:   "success"
@@ -33,5 +32,4 @@ class Wiggle.Classes.Alert
               {
                 type: finalOptions.type,
                 delay: finalOptions.delay
-#                template: finalOptions.template
             })

@@ -5,8 +5,20 @@ module PermitsConcern
 
     def permitted_params
       {
-          :website => website_params,
+          :animation => animation_params,
+          :website   => website_params
       }
+    end
+
+    def animation_params
+      params.fetch(:animation, {}).permit(
+          :name,
+          :html_attribute,
+          :delay,
+          :duration,
+          :count,
+          :animation_type_id
+      )
     end
 
     def website_params

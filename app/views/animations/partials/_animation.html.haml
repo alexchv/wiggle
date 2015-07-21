@@ -1,0 +1,10 @@
+.animation-wrapper{:id => "animation-#{animation.id}"}
+  .animation-tab.tab-opened.container-fluid{:data => {'class-binder' => 'Animation'}}
+    .animation-tab-header.row
+      .anim-header.col-md-3= animation.name
+      .anim-description.col-md-8
+      .tab-switcher.col-md-1
+        .anim-collapse
+          %span.glyphicon.glyphicon-chevron-up{"aria-hidden" => "true"}
+    .animation-tab-content.row
+      = render({:partial => 'animations/partials/form', :locals => {:animation => animation} })
