@@ -3,6 +3,7 @@
   "dependencies": {
     "animate.css": "latest",
     "chosen": "latest",
-    "remarkable-bootstrap-growl": "latest"
+    "remarkable-bootstrap-growl": "latest",
+    "bootstrap3-dialog": "latest"
   }
 }

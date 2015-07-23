@@ -8,3 +8,4 @@
 
 //= require chosen/chosen.jquery.min.js
 //= require remarkable-bootstrap-growl/bootstrap-notify.min.js
+//= require bootstrap3-dialog/dist/js/bootstrap-dialog.js
