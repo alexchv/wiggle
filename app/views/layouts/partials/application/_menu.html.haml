@@ -2,6 +2,6 @@
   %ul.user-tools
     %li.clear-wiggle-logo
     = menu_item('Play', animations_path, {:class => 'animations-list'})
-    = menu_item('Visual', '#', {:class => 'visual'})
+    = menu_item('Visual', website_path(current_user.websites.first), {:class => 'visual'})
     = menu_item('Settings', '#', {:class => 'settings'})
     = menu_item('Log out', destroy_user_session_path, {:class => 'log-out'})

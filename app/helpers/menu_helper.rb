@@ -4,6 +4,8 @@ module MenuHelper
     association = case controller
       when :animations
         'Play'
+      when :websites
+        'Visual'
     end
     association == tab
   end

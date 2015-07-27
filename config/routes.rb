@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   resources :wizard
   resources :animations
+  resources :websites, :only => [:show] do
+    get :experiment, :on => :member
+  end
 
   get 'finish_wizard', :to => 'wizard#finish_wizard'
 

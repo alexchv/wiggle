@@ -432,6 +432,7 @@ DEPENDENCIES
   jquery-rails
   json_spec
   kaminari
+  nokogiri
   nprogress-rails
   omniauth-google-oauth2
   paper_trail

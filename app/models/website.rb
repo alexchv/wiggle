@@ -1,5 +1,7 @@
 class Website < Base::VersionModel
 
+  attr_accessor :web_url
+
   belongs_to :user
 
   has_many :webpages, :dependent => :destroy

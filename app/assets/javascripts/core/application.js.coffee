@@ -10,6 +10,19 @@ class Wiggle.Application
 #      @initializeAllPlugins()
       @initializeConfirmModal()
       @bindClasses()
+#      @testProxy()
+
+  testProxy: =>
+    jqxhr = $.ajax("http://wiggleditor.herokuapp.com/proxy?url=http://rambler.ru").done(->
+      alert 'success'
+      return
+    ).fail(->
+      alert 'error'
+      return
+    ).always(->
+      alert 'complete'
+      return
+    )
 
   initializeAllPlugins: =>
     console.log 'init plugins'
