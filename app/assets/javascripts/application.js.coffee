@@ -14,6 +14,9 @@
 # Plugins
 #= require ./plugins/index
 
+# EJS Templates
+#= require_tree ./templates
+
 # Application
 #= require ./core/application
 

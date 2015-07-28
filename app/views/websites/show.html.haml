@@ -1,7 +1,8 @@
--# form for testing visualizer
+-#form for testing visualizer
 = form_for(Website.new, :url => experiment_website_path(@website), :html => {:method => :get}) do |f|
   = f.text_field :web_url, :placeholder => 'https://upwork.com'
   = f.submit 'test!'
 
-- if params[:web_url].present?
-  %iframe{:src => "http://wiggleditor.herokuapp.com/proxy?url=#{params[:web_url]}", :sandbox => "allow-same-origin allow-scripts", :width => "1250", :height => "500"}
+-#- if params[:web_url].present?
+-#  %iframe{:src => "http://wiggleditor.herokuapp.com/proxy?url=#{params[:web_url]}", :sandbox => "allow-same-origin allow-scripts", :width => "1250", :height => "500"}
+#frame-container{:data => {'class-binder' => 'Visualizer', :url => params[:web_url]}}

@@ -13,16 +13,27 @@ class Wiggle.Application
 #      @testProxy()
 
   testProxy: =>
-    jqxhr = $.ajax("http://wiggleditor.herokuapp.com/proxy?url=http://rambler.ru").done(->
-      alert 'success'
-      return
-    ).fail(->
-      alert 'error'
-      return
-    ).always(->
-      alert 'complete'
-      return
-    )
+#    jqxhr = $.ajax("http://wiggleditor.herokuapp.com/proxy?url=http://amazon.com"
+#    ).done( (data, textStatus, jqXHR) =>
+#      console.log textStatus
+
+      # set spinner
+      $('#frame-container').append(JST['templates/loading_overlay'])
+
+      $('#frame-container').append(JST['templates/visualizer_frame']({content: "http://wiggleditor.herokuapp.com/proxy?url=http://rambler.ru"}))
+
+
+#      $('iframe').contents().find('body').html($(data))
+
+      $('iframe').load =>
+        # disable spinner
+        console.log 123
+#        $('.overlay').remove()
+#      $('iframe').contents().find('html').html(data)
+
+#    ).fail( (jqXHR, textStatus, errorThrown) =>
+#      console.log errorThrown
+#    )
 
   initializeAllPlugins: =>
     console.log 'init plugins'
