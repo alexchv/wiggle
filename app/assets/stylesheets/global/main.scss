@@ -449,6 +449,11 @@ form {
 	}
 }
 
+// iframe container
+.frame-container {
+  position: relative;
+}
+
 // spinner
 .loader {
   margin: 60px auto;
@@ -494,6 +499,8 @@ form {
 
 // overlay
 .overlay {
+  background-color: dimgrey;
+  opacity: 0.5;
   position: absolute;
   left: 0px;
   right: 0px;

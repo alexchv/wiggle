@@ -4,10 +4,8 @@ class Wiggle.Classes.Visualizer
     @loadUrl() if @url
 
   loadUrl: =>
-    # set spinner
-    @$scope.append(JST['templates/loading_overlay'])
+    @$scope.append(JST['templates/loading_overlay']) # set spinner overlay
     @$scope.append(JST['templates/visualizer_frame']({content: "http://wiggleditor.herokuapp.com/proxy?url=#{@url}"}))
 
-    $('iframe').load =>
-      # disable spinner
-      $('.overlay').remove()
+    @$scope.find('iframe').load =>
+      $('.overlay').remove() # remove spinner

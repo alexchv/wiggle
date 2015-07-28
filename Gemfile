@@ -54,7 +54,7 @@ group :development do
       :github => 'nixme/jazz_hands',
       :branch => 'bring-your-own-debugger'                 # Spending hours in the rails console? Spruce it up and show off those hard-working hands! jazz_hands replaces IRB with Pry, improves output through awesome_print, and has some other goodies up its sleeves.
   gem 'pry-nav'                                            # Teaches Pry about step, next, and continue to create a simple debugger.
-  gem 'rack-mini-profiler'                                 # Middleware that displays speed badge for every html page. Designed to work both in production and in development.
+  # gem 'rack-mini-profiler'                                 # Middleware that displays speed badge for every html page. Designed to work both in production and in development.
 end
 
 group :test do

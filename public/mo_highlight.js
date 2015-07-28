@@ -16,12 +16,12 @@ function getPathTo(element) {
 }
 
 document.body.onmouseover= function(ev){
-  ev.target.style.boxShadow = "0px 0px 5px red";
+  ev.target.style.border = "2px dashed lightcoral";
   curXpath = getPathTo(ev.target);
 };
 
 document.body.onmouseout= function(ev){
-  ev.target.style.boxShadow = "0px 0px 0px";
+  ev.target.style.border = "0px"
 };
 
 document.body.onclick = function(ev){
