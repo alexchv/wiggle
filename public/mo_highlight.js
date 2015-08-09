@@ -40,5 +40,5 @@ document.body.onclick = function(ev){
     element_classes: ev.target.className,
     doc_host: parent_location.hostname,
     doc_path: parent_location.pathname},
-      "http://localhost:3000");
+      "http://wiggle-beta.herokuapp.com");
 };

@@ -14,7 +14,7 @@ class Wiggle.Classes.Visualizer
 
   bindModalEventListner: =>
     receiveMessage = (event) ->
-      if event.origin == 'http://localhost:3000'
+      if event.origin == 'http://wiggle-beta.herokuapp.com'
 
         console.log event.data.element_tag
         console.log event.data.element_id
