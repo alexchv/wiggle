@@ -5,3 +5,14 @@ $("#animation-<%=@animation.id%>").replaceWith("<%= j(render({:partial => 'anima
 <% end %>
 
 Wiggle.app.bindClasses($("#animation-<%=@animation.id%>"));
+
+window.lazyModal.close();
+
+if (window.lazyModal) {
+    <% if @animation.errors.any? %>
+        $(".create-animation").replaceWith("<%= j(render({:partial => 'animations/partials/form_modal', :locals => {:animation => @animation} })) %>");
+    <% else %>
+        window.lazyModal.close();
+    <% end %>
+}
+

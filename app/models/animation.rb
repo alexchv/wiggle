@@ -1,6 +1,10 @@
 class Animation < Base::VersionModel
   enum :count => {:once => 0, :infinite => 1}
 
+  attr_accessor :element_tag,
+                :element_id,
+                :element_classes
+
   belongs_to :animation_type
   belongs_to :user
 
@@ -24,5 +28,18 @@ class Animation < Base::VersionModel
                 :minimum => 2,
                 :maximum => 52
             }
+
+  after_save :link_element
+
+  private
+
+    def link_element
+      self.animated_elements.create({
+                                :webpage_id => Webpage.first.id,
+                                :html_tag => element_tag.downcase,
+                                :html_id => element_id,
+                                :html_classes => element_classes
+                               })
+    end
 
 end

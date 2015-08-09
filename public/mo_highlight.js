@@ -25,7 +25,20 @@ document.body.onmouseout= function(ev){
 };
 
 document.body.onclick = function(ev){
-  window.parent.postMessage(curXpath, "*");
+  //window.parent.postMessage(curXpath, "*");
   ev.preventDefault();
   ev.stopPropagation();
+
+  //console.log(ev.target.tagName);
+  console.log(ev.target.classList);
+
+  var parent_location = window.parent.document.location;
+  window.parent.postMessage({
+    element: ev.target.outerHTML,
+    element_tag: ev.target.tagName,
+    element_id: ev.target.id,
+    element_classes: ev.target.className,
+    doc_host: parent_location.hostname,
+    doc_path: parent_location.pathname},
+      "http://localhost:3000");
 };

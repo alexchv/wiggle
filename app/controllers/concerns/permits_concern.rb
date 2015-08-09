@@ -12,6 +12,9 @@ module PermitsConcern
 
     def animation_params
       params.fetch(:animation, {}).permit(
+          :element_tag,
+          :element_id,
+          :element_classes,
           :name,
           :html_attribute,
           :delay,

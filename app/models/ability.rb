@@ -21,6 +21,8 @@ class Ability
 
       can :manage, [Animation, Website] #, :user_id => user_id
 
+      can [:create, :update], Animation, :user_id => user_id
+
       can :manage, Webpage, :website => { :user_id => user_id }
 
       can :manage, AnimatedElement, :animation => { :user_id => user_id }

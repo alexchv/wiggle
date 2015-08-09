@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   get 'finish_wizard', :to => 'wizard#finish_wizard'
 
+  get 'frame_modal', :to => 'animations#frame_modal'
+
 end
