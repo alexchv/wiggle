@@ -6,7 +6,8 @@ class Wiggle.Classes.Visualizer
 
   loadUrl: =>
     @$scope.append(JST['templates/loading_overlay']) # set spinner overlay
-    @$scope.append(JST['templates/visualizer_frame']({content: "http://wiggleditor.herokuapp.com/proxy?url=#{@url}"}))
+#    @$scope.append(JST['templates/visualizer_frame']({content: "http://wiggleditor.herokuapp.com/proxy?url=#{@url}"}))
+    @$scope.append(JST['templates/visualizer_frame']({content: "http://wiggle-beta.herokuapp.com/proxy?url=#{@url}"}))
 #    @$scope.append(JST['templates/visualizer_frame']({content: "http://localhost:3000/proxy?url=#{@url}"}))
 
     @$scope.find('iframe').load =>
