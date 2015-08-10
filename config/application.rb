@@ -36,6 +36,13 @@ module Wiggle
     # config.i18n.default_locale = :en
     # I18n.enforce_available_locales = false
 
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins 'http://wiggleditor.herokuapp.com'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
     # Enable the asset pipeline
     config.assets.enabled = true
     config.assets.digest = true

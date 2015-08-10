@@ -41,6 +41,7 @@ gem 'nprogress-rails'                                      # This is a gem for t
 gem 'with_advisory_lock'                                   # An advisory lock is a mutex used to ensure no two processes run some process at the same time.
 gem 'firebase'                                             # Ruby wrapper for the Firebase REST API.
 gem 'nokogiri'
+gem 'rack-cors'
 
 group :staging, :production do
   gem 'rails_12factor'                                     # Makes running your Rails app easier. Based on the ideas behind 12factor.net
