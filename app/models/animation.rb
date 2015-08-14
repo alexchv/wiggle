@@ -29,7 +29,7 @@ class Animation < Base::VersionModel
                 :maximum => 52
             }
 
-  after_save :link_element
+  after_create :link_element
 
   private
 
