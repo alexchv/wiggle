@@ -13,8 +13,7 @@ class Wiggle.Application
 
   initializeAllPlugins: =>
     console.log 'init plugins'
-
-    $(document).find('head').append('<script src="http://localhost:3000/animate?q=1"></script>')
+    $(document).find('head').append('<script src="http://localhost:3000/animate?q=7c4962e598b2ff3bc8185cddf688e197707d3775"></script>')
 
   bindClasses: ($parent = $('body')) =>
     $parent.find("[data-class-binder]").each (k, el) =>

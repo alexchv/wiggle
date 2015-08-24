@@ -6,6 +6,8 @@ module MenuHelper
         'Play'
       when :websites
         'Visual'
+      when :users
+        'Settings'
     end
     association == tab
   end

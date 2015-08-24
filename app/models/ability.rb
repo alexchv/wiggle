@@ -17,9 +17,11 @@ class Ability
     def apply_user_rights(user)
       user_id = user.id
 
+      can :manage, [User], :id => user_id
+
       can :read, [AnimationCategory, AnimationType]
 
-      can :manage, [Animation, Website] #, :user_id => user_id
+      can :manage, [Animation, Website], :user_id => user_id
 
       can [:create, :update], Animation, :user_id => user_id
 

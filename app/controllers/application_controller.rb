@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   respond_to :html, :js, :json
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to :dashboard, :alert => exception.message
+    redirect_to root_path, :alert => exception.message
   end
 
 end

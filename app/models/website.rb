@@ -14,6 +14,8 @@ class Website < Base::VersionModel
 
   validate :website_validator
 
+  after_create :add_root_page
+
   private
 
     def format_website
@@ -26,6 +28,10 @@ class Website < Base::VersionModel
 
     def website_valid?
       !!url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-=\?]*)*\/?$/)
+    end
+
+    def add_root_page
+      webpages.create({:path => '/'})
     end
 
 end

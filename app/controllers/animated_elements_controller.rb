@@ -1,12 +1,9 @@
 class AnimatedElementsController < LoggedUserController
 
   def animate
-    puts '====='
-    puts @user = User.where({:api_key => params[:q]}).first
-    puts '====='
+    @user = User.where({:api_key => params['q']}).first
   rescue => e
-
-
+    puts e.message
   end
 
 end

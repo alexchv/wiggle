@@ -24,6 +24,22 @@ class User < Base::VersionModel
 
   after_validation :generate_api_key
 
+  class << self
+
+    # thread-safe getter (as implemented in https://github.com/stffn/declarative_authorization)
+    def current
+      Thread.current[:current_user]
+    end
+    alias :current_user :current
+
+    # thread-safe setter (as implemented in https://github.com/stffn/declarative_authorization)
+    def current=(user)
+      Thread.current[:current_user] = user
+    end
+    alias :current_user= :current=
+
+  end
+
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.where(:email => data['email']).first

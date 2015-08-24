@@ -27,6 +27,8 @@ class FirebaseService < Base::EventDispatcher
 
         when :destroy
 
+          FIREBASE_CLIENT.delete(object.class.to_s.underscore.pluralize)
+
       end
 
     end

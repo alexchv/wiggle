@@ -35,7 +35,7 @@ class Animation < Base::VersionModel
 
     def link_element
       self.animated_elements.create({
-                                :webpage_id => Webpage.first.id,
+                                :webpage_id => User.current.websites.first.andand.webpages.first,
                                 :html_tag => element_tag.downcase,
                                 :html_id => element_id,
                                 :html_classes => element_classes
