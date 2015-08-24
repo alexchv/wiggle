@@ -1,0 +1,24 @@
+
+//if user
+
+var els = <%= @user.animated_elements.count %>;
+console.log(els);
+
+$(document).find('head').append("<link rel='stylesheet' media='all' href='/animate.css'>");
+
+<% @user.animated_elements.each do |al| %>
+
+    console.log('<%= j(al.animation_type.name) %>');
+    var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}") %>');
+    if (elem) {
+        $(elem).addClass('<%= j(al.animation_type.name) %>');
+    }
+    $('.lets-wiggle').addClass('<%= j(al.animation_type.name) %>');
+
+<% end %>
+
+
+
+
+
+

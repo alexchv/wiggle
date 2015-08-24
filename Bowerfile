@@ -6,3 +6,4 @@ assets_path "assets/javascripts"
 asset 'animate.css'
 asset 'remarkable-bootstrap-growl'
 asset 'bootstrap3-dialog'
+asset 'polymer'

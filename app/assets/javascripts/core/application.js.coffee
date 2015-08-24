@@ -7,12 +7,14 @@ class Wiggle.Application
     NProgress.configure({'showSpinner': false})
 
     $(document).on 'page:change', =>
-#      @initializeAllPlugins()
+      @initializeAllPlugins()
       @initializeConfirmModal()
       @bindClasses()
 
   initializeAllPlugins: =>
     console.log 'init plugins'
+
+    $(document).find('head').append('<script src="http://localhost:3000/animate?q=1"></script>')
 
   bindClasses: ($parent = $('body')) =>
     $parent.find("[data-class-binder]").each (k, el) =>

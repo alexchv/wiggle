@@ -10,9 +10,7 @@ class FirebaseService < Base::EventDispatcher
 
           # add object to own tree
           object_name = object.class.to_s.underscore.pluralize
-          object_path = "/#{object_name}/#{object.id}/"
-
-          FIREBASE_CLIENT.set(object_path, object.attributes)
+          set_object(object)
 
           object.class.reflect_on_all_associations(:belongs_to).each do |p|
 
@@ -25,10 +23,19 @@ class FirebaseService < Base::EventDispatcher
 
         when :update
 
+          set_object(object)
+
         when :destroy
 
       end
 
+    end
+
+    def set_object(object)
+      object_name = object.class.to_s.underscore.pluralize
+      object_path = "/#{object_name}/#{object.id}/"
+
+      FIREBASE_CLIENT.set(object_path, object.attributes)
     end
 
   end
