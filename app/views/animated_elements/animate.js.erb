@@ -9,9 +9,8 @@
 
         var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}") %>');
         if (elem) {
-            $(elem).addClass('<%= j(al.animation_type.name) %>');
+            $(elem).addClass('<%= j([al.animation_type.name, 'animated'].join(' ')) %>');
         }
-        $('.lets-wiggle').addClass('<%= j(al.animation_type.name) %>');
 
     <% end %>
 <% end %>
