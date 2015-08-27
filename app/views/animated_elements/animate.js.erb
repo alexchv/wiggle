@@ -1,7 +1,7 @@
 <% if @user.present? %>
     $(document).find('head').append("<link rel='stylesheet' media='all' href='/animate.css'>");
 
-    if ($) {
+    if (!$) {
         $(document).find('head').append("<script src='/jquery.js'></script>");
     }
 
