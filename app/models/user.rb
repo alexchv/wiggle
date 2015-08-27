@@ -1,5 +1,7 @@
 class User < Base::VersionModel
 
+  attr_accessor :website_url
+
   has_many :animations,        :dependent => :destroy
   has_many :websites,          :dependent => :destroy
   has_many :webpages,          :through => :websites

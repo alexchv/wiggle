@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :wizard
   resources :users
   resources :animations
-  resources :websites, :only => [:show] do
+  resources :websites, :only => [:show, :update] do
     get :experiment, :on => :member
   end
 

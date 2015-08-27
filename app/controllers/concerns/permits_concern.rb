@@ -5,9 +5,19 @@ module PermitsConcern
 
     def permitted_params
       {
+          :user      => user_params,
           :animation => animation_params,
           :website   => website_params
       }
+    end
+
+    def user_params
+      params.fetch(:user, {}).permit(
+           :website_url,
+           :email,
+           :first_name,
+           :last_name
+      )
     end
 
     def animation_params

@@ -1,0 +1,5 @@
+$("form").replaceWith("<%= j(render({:partial => 'users/partials/form', :locals => {:user => @user} })) %>");
+
+<% unless @user.errors.any? %>
+  Wiggle.Classes.Alert.success('<%= flash.notice %>');
+<% end %>
