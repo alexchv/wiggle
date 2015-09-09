@@ -1,8 +1,8 @@
 <% if @user.present? %>
-    $(document).find('head').append("<link rel='stylesheet' media='all' href='/animate.css'>");
+    $(document).find('head').append("<link rel='stylesheet' media='all' href='http://wiggle-beta.herokuapp.com/animate.css'>");
 
     if (!$) {
-        $(document).find('head').append("<script src='/jquery.js'></script>");
+        $(document).find('head').append("<script src='http://wiggle-beta.herokuapp.com/jquery.js'></script>");
     }
 
     <% @user.animated_elements.each do |al| %>
