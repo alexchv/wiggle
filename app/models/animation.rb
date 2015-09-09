@@ -23,7 +23,7 @@ class Animation < Base::VersionModel
             }
 
   validates :name,
-            :html_attribute,
+            # :html_attribute,
             :length => {
                 :minimum => 2,
                 :maximum => 52
