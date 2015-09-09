@@ -10,6 +10,10 @@ class Animation < Base::VersionModel
 
   has_many :animated_elements, :dependent => :destroy
 
+  before_validation do
+    self.html_attribute = ''
+  end
+
   validates :animation_type,
             :user,
             :count,
