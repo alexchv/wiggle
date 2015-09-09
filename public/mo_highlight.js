@@ -16,12 +16,12 @@ function getPathTo(element) {
 }
 
 document.body.onmouseover= function(ev){
-  ev.target.style.border = "2px dashed lightcoral";
+  ev.target.style.outline = "#0000FF dotted 2px";
   curXpath = getPathTo(ev.target);
 };
 
 document.body.onmouseout= function(ev){
-  ev.target.style.border = "0px"
+  ev.target.style.outline = "0px"
 };
 
 document.body.onclick = function(ev){
