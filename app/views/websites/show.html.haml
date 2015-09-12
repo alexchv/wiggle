@@ -1,6 +1,7 @@
 -#form for testing visualizer
-= form_for(Website.new, :url => experiment_website_path(@website), :html => {:method => :get}) do |f|
-  = f.text_field :web_url, :placeholder => 'https://upwork.com'
-  = f.submit 'test!'
+-#= form_for(Website.new, :url => experiment_website_path(@website), :html => {:method => :get}) do |f|
+-#  = f.text_field :web_url, :placeholder => 'https://upwork.com'
+-#  = f.submit 'test!'
 
-#frame-container{:data => {'class-binder' => 'Visualizer', :url => params[:web_url]}}
+-##frame-container{:data => {'class-binder' => 'Visualizer', :url => params[:web_url]}}
+#frame-container{:data => {'class-binder' => 'Visualizer', :url => @website.url}}
