@@ -9,7 +9,7 @@ class Auth::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     def authenticate_user
       sign_in(:user, @user)
-      redirect_to @user.sign_in_count < 1 ? wizard_index_path : animations_path
+      redirect_to @user.sign_in_count <= 1 ? wizard_index_path : animations_path
     end
 
 end
