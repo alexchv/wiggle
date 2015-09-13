@@ -41,6 +41,11 @@ module Wiggle
         origins 'http://wiggleditor.herokuapp.com'
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
+
+      allow do
+        origins '*'
+        resource '/animate/*', :headers => :any, :methods => :get
+      end
     end
 
     # Enable the asset pipeline
