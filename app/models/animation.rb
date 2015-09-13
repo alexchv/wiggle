@@ -38,11 +38,8 @@ class Animation < Base::VersionModel
   private
 
     def link_element
-      puts '****'
-      puts '****'
-      puts '****'
       self.animated_elements.create({
-                                :webpage_id => User.current.websites.first.andand.webpages.first,
+                                :webpage => User.current.websites.first.andand.webpages.first,
                                 :html_tag => element_tag.downcase,
                                 :html_id => element_id,
                                 :html_classes => element_classes
