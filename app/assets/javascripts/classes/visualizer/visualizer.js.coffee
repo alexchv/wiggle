@@ -32,15 +32,16 @@ class Wiggle.Classes.Visualizer
             el_id: event.data.element_id
             el_classes: event.data.element_classes
         ).done( (result) =>
-#          console.log '====='
-#          console.log result
-#          console.log '====='
 
-          window.lazyModal = BootstrapDialog.show
-            cssClass: 'wiggle-animation-modal'
-#            title: '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>'
-            title: ''
-            message: $(result)
+          if window.lazyModal == null
+            window.lazyModal = BootstrapDialog.show
+              cssClass: 'wiggle-animation-modal'
+  #            title: '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>'
+              title: ''
+              message: $(result)
+              onhidden: (dialog) =>
+                console.log dialog
+                window.lazyModal = null
 
         ).fail( =>
 
