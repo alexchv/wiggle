@@ -8,6 +8,9 @@
     <% @user.animated_elements.each do |al| %>
 
         var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}") %>');
+        console.log('====');
+        console.log(elem);
+        console.log('====');
         if (elem) {
             $(elem).addClass('<%= j([al.animation_type.name, 'animated'].join(' ')) %>');
         }
