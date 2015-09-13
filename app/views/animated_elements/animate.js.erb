@@ -1,22 +1,25 @@
-<% if @user.present? %>
-    $(document).find('head').append("<link rel='stylesheet' media='all' href='http://wiggle-beta.herokuapp.com/animate.css'>");
+$(document).find('head').append("<link rel='stylesheet' media='all' href='http://wiggle-beta.herokuapp.com/animate.css'>");
 
-    if (!$) {
-        $(document).find('head').append("<script src='http://wiggle-beta.herokuapp.com/jquery.js'></script>");
-    }
+window.onload = function() {
+    <% if @user.present? %>
 
-    <% @user.animated_elements.each do |al| %>
-
-        var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}") %>');
-        console.log('====');
-        console.log(elem);
-        console.log('====');
-        if (elem) {
-            $(elem).addClass('<%= j([al.animation_type.name, 'animated'].join(' ')) %>');
+        if (!$) {
+            $(document).find('head').append("<script src='http://wiggle-beta.herokuapp.com/jquery.js'></script>");
         }
 
-    <% end %>
+        <% @user.animated_elements.each do |al| %>
+
+            var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}") %>');
+            console.log('====');
+            console.log(elem);
+            console.log('====');
+            if (elem) {
+                $(elem).addClass('<%= j([al.animation_type.name, 'animated'].join(' ')) %>');
+            }
+
+        <% end %>
 <% end %>
+};
 
 
 
