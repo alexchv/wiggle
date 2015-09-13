@@ -33,7 +33,7 @@ class Wiggle.Classes.Visualizer
             el_classes: event.data.element_classes
         ).done( (result) =>
 
-          if window.lazyModal == null
+          if window.lazyModal == null or window.lazyModal == undefined
             window.lazyModal = BootstrapDialog.show
               cssClass: 'wiggle-animation-modal'
   #            title: '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>'
