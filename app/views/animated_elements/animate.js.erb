@@ -13,8 +13,9 @@ window.onload = function() {
 
             if (elem) {
                 var $elem = $(elem);
-                $elem.addClass('<%= j([al.animation_type.name, 'animated'].join(' ')) %>');
+
                 $elem.css({"-vendor-animation-duration": '<%= j(al.animation.duration.to_s) %>', "-vendor-animation-delay": '<%= j(al.animation.delay.to_s) %>', "-vendor-animation-iteration-count": '<%= j(al.animation.count.to_s) %>'});
+                $elem.addClass('<%= j([al.animation_type.name, 'animated'].join(' ')) %>');
             }
 
         <% end %>
