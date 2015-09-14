@@ -37,7 +37,8 @@ document.body.onclick = function(ev){
     element: ev.target.outerHTML,
     element_tag: ev.target.tagName,
     element_id: ev.target.id,
-    element_classes: ev.target.className},
+    element_classes: ev.target.className,
+    element_attributes: ev.target.attributes},
     //doc_host: parent_location.hostname,
     //doc_path: parent_location.pathname},
       "http://wiggle-beta.herokuapp.com");
