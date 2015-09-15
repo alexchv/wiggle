@@ -21,6 +21,7 @@ class Wiggle.Classes.Visualizer
         console.log event.data.element_tag
         console.log event.data.element_id
         console.log event.data.element_classes
+        console.log event.data.element_attrs
 
         return unless event.data.element
 
