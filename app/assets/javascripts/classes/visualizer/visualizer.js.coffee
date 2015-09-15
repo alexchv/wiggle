@@ -18,10 +18,11 @@ class Wiggle.Classes.Visualizer
 #      if event.origin == 'http://wiggle-beta.herokuapp.com'
       if event.origin == 'http://wiggleditor.herokuapp.com'
 
-        console.log event.data.element_tag
-        console.log event.data.element_id
-        console.log event.data.element_classes
-        console.log event.data.element_attrs
+        console.log event
+#        console.log event.data.element_tag
+#        console.log event.data.element_id
+#        console.log event.data.element_classes
+#        console.log event.data.element_attrs
 
         return unless event.data.element
 

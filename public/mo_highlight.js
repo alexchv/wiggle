@@ -32,17 +32,16 @@ document.body.onclick = function(ev){
   //console.log(ev.target.tagName);
   console.log(ev.target.classList);
   console.log(ev.target.attributes);
-  //var el_attrs = ev.target.attributes;
-  var el_attrs = jQuery.extend(true, {}, ev.target.attributes);
+  var el_attrs = ev.target.attributes;
+  //var el_attrs = jQuery.extend(true, {}, ev.target.attributes);
 
   //var parent_location = window.parent.document.location;
   window.parent.postMessage({
     element: ev.target.outerHTML,
     element_tag: ev.target.tagName,
     element_id: ev.target.id,
-    element_classes: ev.target.className,
-    element_attrs: el_attrs},
+    element_classes: ev.target.className},
     //doc_host: parent_location.hostname,
     //doc_path: parent_location.pathname},
-      "http://wiggle-beta.herokuapp.com");
+      "http://wiggle-beta.herokuapp.com", [el_attrs]);
 };
