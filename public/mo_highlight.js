@@ -32,7 +32,7 @@ document.body.onclick = function(ev){
   //console.log(ev.target.tagName);
   console.log(ev.target.classList);
   console.log(ev.target.attributes);
-  var el_attrs = ev.target.attributes;
+  //var el_attrs = ev.target.attributes;
   //var el_attrs = jQuery.extend(true, {}, ev.target.attributes);
 
   //var parent_location = window.parent.document.location;
@@ -43,5 +43,5 @@ document.body.onclick = function(ev){
     element_classes: ev.target.className},
     //doc_host: parent_location.hostname,
     //doc_path: parent_location.pathname},
-      "http://wiggle-beta.herokuapp.com", [el_attrs]);
+      "http://wiggle-beta.herokuapp.com");
 };
