@@ -32,4 +32,8 @@ class AnimatedElement < Base::VersionModel
     jq_classes.prepend('.')
   end
 
+  def get_jq_selector
+    jq_selector.gsub(webpage.website.url ,'/')
+  end
+
 end
