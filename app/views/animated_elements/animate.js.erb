@@ -12,6 +12,10 @@ window.onload = function() {
             var selector = '<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}#{al.jq_selector}") %>';
             selector = selector.replace('&#39;', "'");
 
+            console.log('=======');
+            console.log(selector);
+            console.log('=======');
+
             var elem = $(document).find(selector);
 
             if (elem) {
