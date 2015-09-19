@@ -29,7 +29,7 @@ document.body.onclick = function(ev){
   ev.preventDefault();
   ev.stopPropagation();
 
-  console.log(ev.target.classList);
+  console.log(document.location);
   console.log(ev.target.attributes);
 
   var el_attrs_nm = ev.target.attributes;
@@ -43,7 +43,13 @@ document.body.onclick = function(ev){
     console.log(attr_value);
 
     if (attr_value && !jq_selector) {
-      jq_selector = ["[", attr, "=", "'", attr_value.value, "'", "]"].join('');
+      var attr_val = attr_value.value;
+
+      if (attr == 'src') {
+        attr_val = attr_val.replace(document.location ,'');
+      }
+
+      jq_selector = ["[", attr, "=", "'", attr_val, "'", "]"].join('');
     }
   });
 
