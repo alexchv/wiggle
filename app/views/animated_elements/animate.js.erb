@@ -9,7 +9,7 @@ window.onload = function() {
 
         <% @user.animated_elements.each do |al| %>
 
-            var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}#{al.jq_selector}") %>');
+            var elem = $(document).find('<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}#{al.jq_selector.andand.html_safe}") %>');
 
             if (elem) {
                 var $elem = $(elem);

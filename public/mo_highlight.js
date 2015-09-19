@@ -43,7 +43,7 @@ document.body.onclick = function(ev){
     console.log(attr_value);
 
     if (attr_value && !jq_selector) {
-      jq_selector = ["[", "name", "=", "'", attr_value.value, "'", "]"].join('');
+      jq_selector = ["[", attr, "=", "'", attr_value.value, "'", "]"].join('');
     }
   });
 
