@@ -21,6 +21,7 @@ class Wiggle.Classes.Visualizer
         console.log event.data.element_tag
         console.log event.data.element_id
         console.log event.data.element_classes
+        console.log event.data.element_jq_selector
 
         return unless event.data.element
 
@@ -31,6 +32,7 @@ class Wiggle.Classes.Visualizer
             el_tag: event.data.element_tag
             el_id: event.data.element_id
             el_classes: event.data.element_classes
+            el_jq_selector: event.data.element_jq_selector
         ).done( (result) =>
 
           if window.lazyModal == null or window.lazyModal == undefined

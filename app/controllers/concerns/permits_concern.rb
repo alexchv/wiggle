@@ -25,6 +25,7 @@ module PermitsConcern
           :element_tag,
           :element_id,
           :element_classes,
+          :element_jq_selector,
           :name,
           :html_attribute,
           :delay,

@@ -4,6 +4,7 @@
   = f.hidden_field :element_tag, :value => params['el_tag']
   = f.hidden_field :element_id, :value => params['el_id']
   = f.hidden_field :element_classes, :value => params['el_classes']
+  = f.hidden_field :element_jq_selector, :value => params['el_jq_selector']
   .form-group
     %label Animation name
     = f.input(:name, :label => false, :input_html => {:placeholder => "Get Started Button Swing"})

@@ -3,7 +3,8 @@ class Animation < Base::VersionModel
 
   attr_accessor :element_tag,
                 :element_id,
-                :element_classes
+                :element_classes,
+                :element_jq_selector
 
   belongs_to :animation_type
   belongs_to :user
@@ -42,7 +43,8 @@ class Animation < Base::VersionModel
                                 :webpage => User.current.websites.first.andand.webpages.first,
                                 :html_tag => element_tag.downcase,
                                 :html_id => element_id,
-                                :html_classes => element_classes
+                                :html_classes => element_classes,
+                                :jq_selector => element_jq_selector
                                })
     end
 

@@ -29,18 +29,27 @@ document.body.onclick = function(ev){
   ev.preventDefault();
   ev.stopPropagation();
 
-  //console.log(ev.target.tagName);
   console.log(ev.target.classList);
   console.log(ev.target.attributes);
-  //var el_attrs = ev.target.attributes;
-  //var el_attrs = jQuery.extend(true, {}, ev.target.attributes);
+
+  var el_attrs_nm = ev.target.attributes;
+  var seacrhed_attrs = ['src', 'name', 'href', 'title'];
+  var jq_selector = null;
+
+  seacrhed_attrs.forEach(function(attr) {
+    var attr_value = el_attrs_nm.getNamedItem(attr);
+    if (attr_value && !jq_selector) {
+      jq_selector = ["[", "name", "=", "'", attr_value.value, "'", "]"].join('');
+    }
+  });
 
   //var parent_location = window.parent.document.location;
   window.parent.postMessage({
     element: ev.target.outerHTML,
     element_tag: ev.target.tagName,
     element_id: ev.target.id,
-    element_classes: ev.target.className},
+    element_classes: ev.target.className,
+    element_jq_selector: jq_selector},
     //doc_host: parent_location.hostname,
     //doc_path: parent_location.pathname},
       "http://wiggle-beta.herokuapp.com");
