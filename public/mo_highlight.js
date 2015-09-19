@@ -29,7 +29,7 @@ document.body.onclick = function(ev){
   ev.preventDefault();
   ev.stopPropagation();
 
-  console.log(document.location);
+  console.log(window.parent.document.location);
   console.log(ev.target.attributes);
 
   var el_attrs_nm = ev.target.attributes;
