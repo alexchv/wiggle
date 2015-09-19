@@ -38,6 +38,10 @@ document.body.onclick = function(ev){
 
   seacrhed_attrs.forEach(function(attr) {
     var attr_value = el_attrs_nm.getNamedItem(attr);
+
+    console.log(attr);
+    console.log(attr_value);
+
     if (attr_value && !jq_selector) {
       jq_selector = ["[", "name", "=", "'", attr_value.value, "'", "]"].join('');
     }
