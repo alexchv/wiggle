@@ -10,7 +10,7 @@ window.onload = function() {
         <% @user.animated_elements.each do |al| %>
 
             var selector = '<%= j("#{al.html_tag}#{al.classes_to_jq}#{al.id_to_jq}#{al.jq_selector}") %>';
-            selector = selector.replace('&#39;', "'");
+            selector = selector.replace(/&#39;/g, "'");
 
             console.log('=======');
             console.log(selector);
