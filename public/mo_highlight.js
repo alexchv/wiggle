@@ -33,7 +33,7 @@ document.body.onclick = function(ev){
   console.log(ev.target.attributes);
 
   var el_attrs_nm = ev.target.attributes;
-  var seacrhed_attrs = ['src', 'name', 'href', 'title', 'style'];
+  var seacrhed_attrs = ['src', 'name', 'href', 'title'];
   var jq_selector = null;
 
   seacrhed_attrs.forEach(function(attr) {
