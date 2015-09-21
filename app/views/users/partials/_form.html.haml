@@ -1,6 +1,6 @@
 = simple_form_for([user], :remote => true, :html => {:class => 'settings-block row'}) do |f|
   %header.col-xs-12 Account info
-  .col-md-6.col-lg-7.main-info
+  .main-info
     .form-group
       %label Website URL
       = f.input(:website_url, :label => false, :input_html => {:readonly => true, :value => user.websites.first.url})

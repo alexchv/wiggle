@@ -16,7 +16,8 @@ function getPathTo(element) {
 }
 
 document.body.onmouseover= function(ev){
-  ev.target.style.outline = "#0000FF dotted 2px";
+  //ev.target.style.outline = "#0000FF dotted 2px";
+  ev.target.style.outline = "#fe430d solid 3px";
   curXpath = getPathTo(ev.target);
 };
 

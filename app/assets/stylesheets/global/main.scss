@@ -14,6 +14,7 @@
 
 body {
   height: 100%;
+  background-color: #f2f2f2;
 }
 .Visualizer {
   height: 100%;
@@ -305,7 +306,8 @@ form {
 		}			
 	}
 	.content {
-		margin-left: 100px;		
+        padding-bottom: 20px;
+		margin-left: 100px;
 		height: 100%;
 		header {
 			font-size: 1.9em;
@@ -616,4 +618,8 @@ form {
   .modal-dialog {
     margin: 80px auto;
   }
+}
+
+.settings-block .submit-form-group .submit-changes {
+  margin: 30px 10px auto auto !important;
 }
