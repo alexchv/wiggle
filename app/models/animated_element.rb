@@ -21,6 +21,11 @@ class AnimatedElement < Base::VersionModel
 
   end
 
+  def get_tag
+    return nil if jq_selector.include?(':contains')
+    html_tag
+  end
+
   def id_to_jq
     return '' if html_id.empty?
     "##{html_id}"
