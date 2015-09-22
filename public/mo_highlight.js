@@ -56,6 +56,8 @@ document.body.onclick = function(ev){
     jq_selector = $(ev.target.tagName.toLowerCase() + ':contains(' + ev.target.innerHTML + ')');
   }
 
+  console.log(jq_selector);
+
   //var parent_location = window.parent.document.location;
   window.parent.postMessage({
     element: ev.target.outerHTML,
