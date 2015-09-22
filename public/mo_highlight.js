@@ -39,9 +39,6 @@ document.body.onclick = function(ev){
   seacrhed_attrs.forEach(function(attr) {
     var attr_value = el_attrs_nm.getNamedItem(attr);
 
-    console.log(attr);
-    console.log(attr_value);
-
     if (attr_value && !jq_selector) {
       var attr_val = attr_value.value;
 
@@ -50,10 +47,12 @@ document.body.onclick = function(ev){
       }
 
       jq_selector = ["[", attr, "=", "'", attr_val, "'", "]"].join('');
-    }
+    };
   });
 
-  if (!jq_selector) {
+  console.log(jq_selector);
+
+  if (jq_selector == null) {
     jq_selector = $(ev.target.tagName.toLowerCase() + ':contains(' + ev.target.innerHTML + ')');
   }
 
