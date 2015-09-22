@@ -50,8 +50,6 @@ document.body.onclick = function(ev){
     };
   });
 
-  console.log(jq_selector);
-
   if (jq_selector == null) {
     jq_selector = ev.target.tagName.toLowerCase() + ':contains(' + ev.target.innerHTML + ')';
   }
