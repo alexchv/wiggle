@@ -53,6 +53,10 @@ document.body.onclick = function(ev){
     }
   });
 
+  if (!jq_selector) {
+    jq_selector = $(ev.target.tagName.toLowerCase() + ':contains(' + ev.target.innerHTML + ')');
+  }
+
   //var parent_location = window.parent.document.location;
   window.parent.postMessage({
     element: ev.target.outerHTML,
